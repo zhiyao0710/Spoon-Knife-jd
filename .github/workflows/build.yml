@@ -19,8 +19,8 @@ jobs:
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull docker.io/amazon/aws-cli:latest
-          docker tag amazon/aws-cli:latest zhiyao07102/jd_test_rep/test_image
-          docker push zhiyao07102/jd_test_rep/test_image:1.0
+          docker tag amazon/aws-cli:latest zhiyao07102/jd_test_rep/test_image:V1.0
+          docker push zhiyao07102/jd_test_rep/test_image:V1.0
 
       - name: Create and Push image
         uses: mr-smithers-excellent/docker-build-push@v6
