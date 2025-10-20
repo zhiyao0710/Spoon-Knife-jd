@@ -17,7 +17,7 @@ jobs:
         
       - name: pull a basic image
         run: |
-          docker login ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull amazon/aws-cli:2.31.18
           docker tag aws-cli:2.31.18 zhiyao07102/test_image
           docker push zhiyao07102/test_image:1.0
